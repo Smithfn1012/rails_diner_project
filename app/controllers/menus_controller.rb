@@ -29,5 +29,3 @@ class MenusController < ApplicationController
         @new_items = @menu.tap{|m| 3.times { m.items.build} }.items
     end
 end
-
-end
