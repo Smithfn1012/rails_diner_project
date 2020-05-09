@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_200114) do
+ActiveRecord::Schema.define(version: 2020_05_09_210906) do
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.float "price"
+    t.boolean "is_special"
+    t.string "size"
+    t.integer "menu_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["menu_id"], name: "index_items_on_menu_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
