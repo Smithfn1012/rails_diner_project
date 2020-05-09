@@ -2,6 +2,7 @@
   <%= @order.user.name %> - <%= @order.id %>
 </h2>
 
+
 <ul>
   <% @order.items.each do |item| %>
     <li><%= item.name %> - <%= item.price %></li>

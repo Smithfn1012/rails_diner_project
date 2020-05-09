@@ -1,9 +1,10 @@
-<%= if @order.errors.any? %>
-  <h4 style="color: blue;"><%= @order.errors.full_messages.to_sentence %></h4>
+<% if @order.errors.any? %>
+  <h4 style="color: red;"><%= @order.errors.full_messages.to_sentence %></h4>
 <% end %>
 
-<%= form_for @order do |f| %>
+<%= form_for @order do |f|%>
+
   <%= f.select :user_id, @users.map {|u| [u.name, u.id]} %>
-  <%= f.collection_check_boxes :items_ids, @items, :id, :name %>
+  <%= f.collection_check_boxes :item_ids, @items, :id, :name %>
   <%= f.submit %>
 <% end %>
