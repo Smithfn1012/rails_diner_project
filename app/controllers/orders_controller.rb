@@ -15,4 +15,14 @@ class OrdersController < ApplicationController
             render :new
         end
     end
+
+    def show
+        @order = Order.find(params[:id])
+    end
+
+    private
+
+    def order_params
+        params.require(:order).permit(:user_id, item_ids: [])
+    end
 end
