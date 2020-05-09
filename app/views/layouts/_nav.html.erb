@@ -3,8 +3,8 @@
         <li><%= link_to "Login", new_user_session_path %></li>
         <li><%= link_to "Signup", new_user_registration_path %></li>
     <% else %>
-        <li><%= link_to "View Menu", "#" %></li>
-        <li><%= link_to "Create Order", "#" %></li>
+        <li><%= link_to "Create Order", new_order_path %></li>
+        <li><%= link_to "Create Menu", new_menu_path %></li>
         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
     <% end %>
 </ul>
