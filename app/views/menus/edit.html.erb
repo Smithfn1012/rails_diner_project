@@ -1,0 +1,11 @@
+<%= form_with model: @menu, local: true do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <p> Create a New Menu! </p>
+    <%= f.fields_for :items, @new_items do |item| %>
+        <%= item.text_field :name, placeholder: "name" %><br>
+        <%= item.number_field :price, placeholder: "price" %><br>
+        <%= item.text_field :description, placeholder: "description" %><br>
+<% end %>
+  <%= f.submit %>
+<% end %>

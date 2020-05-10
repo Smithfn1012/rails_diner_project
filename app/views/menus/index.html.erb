@@ -1,8 +1,5 @@
 <h1>Menu's</h1>
 
 <% @menus.each do |menu| %>
-
-  <tr class= "">
-    <td><%= menu.name %></td>
-  </tr>
+  <li><%= link_to menu_path(menu.name) %></li>
 <% end %>

@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :menus
   resources :items
   resources :orders
-  # root to: "users#home"
+  root to: "users#home"
 end
