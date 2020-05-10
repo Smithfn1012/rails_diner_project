@@ -1,5 +1,5 @@
 <% if @menu.errors.any? %>
-   <h4 style="color: blue;"><%= @menu.errors.full_messages.to_sentence %></h4>
+   <h3 style="color: red;"><%= @menu.errors.full_messages.to_sentence %></h3>
 <% end %>
 
 <%= form_with model: @menu, local: true do |f| %>
@@ -10,7 +10,6 @@
         <%= item.text_field :name, placeholder: "name" %><br>
         <%= item.number_field :price, placeholder: "price" %><br>
         <%= item.text_field :description, placeholder: "description" %><br>
-    <% end %>
-
-    <%= f.submit %>
+<% end %>
+  <%= f.submit %>
 <% end %>
