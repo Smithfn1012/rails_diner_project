@@ -1,5 +1,5 @@
 <h1>Menu's</h1>
 
 <% @menus.each do |menu| %>
-  <li><%= link_to menu_path(menu.name) %></li>
+  <li><%= link_to menu.name, "menu_item_path(@menu)" %></li>
 <% end %>
