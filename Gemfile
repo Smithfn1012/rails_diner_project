@@ -22,6 +22,7 @@ gem 'devise'
 # gem 'redis', '~> 4.0'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'activerecord-session_store'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
