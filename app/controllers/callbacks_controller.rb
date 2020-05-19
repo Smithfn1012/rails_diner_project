@@ -1,4 +1,4 @@
-class CallbacksController < Devise::OmniauthCallbacksController
+class CallbacksController < ApplicationController
 
   def github
     @user = User.create_from_provider_data(request.env['omniauth.auth'])
